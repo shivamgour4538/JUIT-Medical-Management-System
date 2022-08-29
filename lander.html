@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Medical Management System</title>
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+   <!-- SIMPLE LINE ICONS-->
+   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+   <!-- ANIMATE.CSS-->
+   <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+   <!-- WHIRL (spinners)-->
+   <link rel="stylesheet" href="vendor/whirl/dist/whirl.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel = "icon" href ="app/img/MMSlogo.png" type = "image/x-icon">
+</head>
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            height: 60px;
+        }
+
+        .background {
+            background-image: linear-gradient(to right, #D1DCF7 , #1580CF);
+            background-blend-mode: darken;
+            background-size: cover;
+        }
+        .foreground {
+            background-image: linear-gradient(to right, #D1DCF7 , #1580CF);
+
+        }
+
+        .nav-list {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .logo a {
+            color: black;
+            text-decoration-style: solid;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: "Segoe UI", sans-serif;
+
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 26px 30px;
+            align-content: center;
+            align-items: center;
+
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: black;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 18px;
+        }
+
+        .nav-list li a:hover {
+            color: white;
+        }
+
+        .rightNav {
+            width: 30%;
+            text-align: center;
+            color: white !important;
+            text-decoration: none !important;
+            display: contents;
+        }
+
+        .rightNav a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: "Segoe UI", sans-serif;
+            padding: 26px 30px;
+        }
+
+
+
+        .rightNav i {
+            color: black;
+            font-size: 26px;
+         }
+
+        .rightNav i:hover {
+            color: white;
+        }
+
+
+
+        .firstSection {
+            background-color: black;
+            height: 100vh;
+        }
+
+        .secondSection {
+            background-image: linear-gradient(to right, #CAF0F8 , #023E8A);
+            height: 500px;
+            box-sizing: border-box;
+
+
+        }
+        .anotherSection {
+            background-image: linear-gradient(to right, #499E8D , #FFF6C9);
+            height: 500px;
+            box-sizing: border-box;
+
+
+        }
+        .contactUs {
+            background-color: #2c3e50;
+            height: 250px;
+            box-sizing: border-box;
+
+
+        }
+
+
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            max-width: 80%;
+            margin: auto;
+            height: 80%;
+        }
+
+        .firstHalf {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .secondhalf {
+            width: 30%;
+        }
+
+        .secondhalf img {
+            width: 70%;
+            border: 4px solid white;
+            border-radius: 150px;
+            display: block;
+            margin: auto;
+        }
+
+        .text-big {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        .text-small {
+            font-size: 18px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            margin: 7px 0;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-sm {
+            padding: 6px 10px;
+            vertical-align: middle;
+        }
+
+        .section {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .section-Left {
+            flex-direction: row-reverse;
+        }
+
+        .paras {
+            padding: 0px 65px;
+        }
+
+        .thumbnail img {
+            width: 250px;
+            border: 2px solid black;
+            border-radius: 26px;
+            margin-top: 19px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .text-footer {
+            text-align: center;
+            padding: 10px;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        footer{
+            height: 40px;
+        }
+
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://www.juit.ac.in/galleryimages/1.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 68%;
+    right: 0%;
+  transform: translate(-50%, -50%);
+  color: white;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+}
+.hero-text button{
+    padding: 15px 32px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 15px;
+
+}
+.hero-text button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.tel:hover {
+    color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: whitesmoke;
+}
+
+.card img {
+    width: 100%
+}
+
+.container {
+  padding: 0 16px;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: black;
+  text-align: center;
+
+}
+.mail {
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+.column {
+  width: 18%;
+  margin-bottom: 16px;
+  padding: 0 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.column2 {
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.column2 a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+
+}
+.column2 p, h3 {
+    color: white;
+}
+.column2 a:hover{
+    color: grey;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar background">
+        <div class="logo">
+                <a href="#">JUIT MMS</a>
+                <a href=" ">"C:\Users\asus\Desktop\JPLogo.jpg"</a>
+            </div>
+        <ul class="nav-list">
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#staff">Staff</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="rightNav">
+            <a class="tel" href="tel:8882192787"> Helpline: +91 - 8626816777 </a>
+            <a href="index.html"><i href="index.html" class="icon-people fa-2x"></i></a>
+        </div>
+    </nav>
+
+    <section class="firstSection" id="home">
+        <div class="hero-image">
+  <div class="hero-text">
+    <h1>“Normal led to this”</h1>
+    <p style="padding: 10px 10px">~Ed Yong</p>
+      <a style="color: black; -webkit-text-stroke-width: thick" href="https://www.cowin.gov.in/" target="_blank"><button>COVID-19 ADVISORY</button></a>
+  </div>
+</div>
+    </section>
+
+    <section class="secondSection" id="doctors">
+        <h2 style="text-align: center; padding: 25px; font-size: 30px">Doctors</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="app/img/Doc.png" alt="doctor">
+      <div class="container">
+        <h2 style="font-size: 18px; padding: 10px">Dr. N.S. Jaswal</h2>
+        <p class="title">Medical Superintendent</p>
+        <p class="mail">admin@juitsolan.in/p>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="card">
+      <img src="app/img/Doc.png" alt="doctor">
+      <div class="container">
+        <h2 style="font-size: 18px; padding: 10px">Dr BHARTI JASWAL</h2>
+        <p class="title"> Chief Medical Officer</p>
+        <p class="mail">admin@juitsolan.in/p>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="card">
+      <img src="app/img/Doc.png" alt="doctor">
+      <div class="container">
+        <h2 style="font-size: 18px; padding: 10px">Dr Amit Sinha</h2>
+        <p class="title">Medical Officer</p>
+        <p class="mail">admin@juitsolan.in</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <section class="anotherSection" id="staff">
+        <h2 style="text-align: center; padding: 25px; font-size: 30px">Staff</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="app/img/Staff1.png" alt="doctor">
+      <div class="container">
+        <h2 style="font-size: 18px; padding: 10px">Mr. Staff</h2>
+        <p class="title">Assistant</p>
+        <p class="mail">admin@juitsolan.in</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="card">
+      <img src="app/img/Staff1.png" alt="doctor">
+      <div class="container">
+        <h2 style="font-size: 18px; padding: 10px">Mr. Staff</h2>
+        <p class="title">Assistant</p>
+        <p class="mail">admin@juitsolan.in</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="card">
+      <img src="app/img/Staff1.png" alt="doctor">
+      <div class="container">
+        <h2 style="font-size: 18px; padding: 10px">Mr. Staff</h2>
+        <p class="title">Assistant</p>
+        <p class="mail">admin @juitsolan.in</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+
+      <section class="contactUs" id="contact">
+            <h2 style="text-align: center; padding: 25px; font-size: 30px; color: white">Contact Us</h2>
+          <div style="margin-left: 15%" class="row">
+  <div class="column2">
+    <h3 style="padding-bottom: 10px">CONTACT DETAILS:</h3>
+      <p>Jaypee University of Information Technology</p>
+      <p>Waknaghat, P.O. Waknaghat, Teh Kandaghat,</p>
+      <p> Distt. Solan PIN-173 234 (H.P.), India</p>
+      <a class="tel" href="tel:+91 - 8626816777">Tel.: +91 -1792 -239203</a>
+    </div>
+
+
+    <div class="column2">
+    <h3 style="padding-bottom: 10px">USEFUL LINKS:</h3>
+      <a href="" target="_blank">Pharmacy</a>
+      <a href="" target="_blank">Medicine</a>
+      <a href="" target="_blank">Ambulance</a>
+      <p>Quick Dials</p>
+    </div>
+
+
+    <div class="column2">
+    <h3 style="padding-bottom: 10px">OTHER LINKS:</h3>
+        <a href="https://www.juit.ac.in/" target="_blank">University Website</a>
+      <a href="" target="_blank">Duty  Doctor</a>
+      <a href="https://www.juit.ac.in/aspirant-dispensary/" target="_blank">Duty  Staff</a>
+      <p>Services</p>
+    </div>
+  </div>
+
+
+      </section>
+
+    <footer class="foreground">
+        <p class="text-footer">
+            Developed with &#x2665;  at JUIT| 2022
+        </p>
+    </footer>
+</body>
+</html>
